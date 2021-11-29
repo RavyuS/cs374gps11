@@ -3,7 +3,7 @@ from user_code import tsp_solver
 import time
 
 WEIGHT_LIMIT = 1000 #Default according to GSP
-NUM_NODES = [3,4,5,6,7,10,12] # list used to generate test cases with specified number of nodes. Feel free to modify.
+NUM_NODES = [3,4,5,6,7,10] # list used to generate test cases with specified number of nodes. Feel free to modify.
 
 
 def runTest():
