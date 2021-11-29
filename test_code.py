@@ -25,7 +25,7 @@ def runTest():
         dp_time = dp_end - dp_start
         print(f"DP solution: {dp_weight}, Time: {dp_time}")
 
-        if b_weight is dp_weight:
+        if b_weight == dp_weight:
             print("Correct soln!\n\n")
             num_correct+=1
         else:
