@@ -12,16 +12,16 @@ def runTest():
         test_g = generate_tsp_test_case(i,WEIGHT_LIMIT)
         print(f"Testing randomly generated graph with {i} nodes")
         #Brute force to get solutions to compare against. Also measure time
-        b_start = time.time()
+        b_start = time.perf_counter()
         b_tour, b_weight = traveling_salesman_brute_force(test_g)
-        b_end = time.time()
+        b_end = time.perf_counter()
         b_time = b_end - b_start
         print(f"Brute Force solution weight: {b_weight}, Time: {b_time}")
 
         #Test implementation
-        dp_start = time.time()
+        dp_start = time.perf_counter()
         dp_weight = tsp_solver(test_g,0) #Default start at 0 for this test to follow bruteforce soln
-        dp_end = time.time()
+        dp_end = time.perf_counter()
         dp_time = dp_end - dp_start
         print(f"DP solution: {dp_weight}, Time: {dp_time}")
 
